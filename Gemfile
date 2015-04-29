@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -33,6 +33,9 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'responders'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
