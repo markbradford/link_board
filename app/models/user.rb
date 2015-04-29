@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
   validates :email,
     presence: true,
-    uniqueness: {case_sensitive: false}
+    uniqueness: {case_sensitive: false},
+    email_format: { message: "Not a valid email address" }
 
   validates :password,
     presence: true,

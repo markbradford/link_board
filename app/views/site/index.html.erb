@@ -1,0 +1,13 @@
+<div class=row>
+<div class="col-md-6 col-md-offset-3">
+<%= render "layouts/flash" %>
+<h1> Link Board </h1>
+<%= "Welcome Back #{@current_user.email}!" if @current_user %>
+<hr>
+<%= bootstrap_form_for :post do |f| %>
+  <%= f.text_field :title, placeholder: "Title"%>
+  <%= f.text_area :text, placeholder: "Enter your post"%>
+  <%= f.submit "Submit Post", class: "btn btn-success" %>
+<% end %>
+</div>
+</div>

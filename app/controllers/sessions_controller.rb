@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   def new
   end
 
-  #set the session (POST)
   def create
 
      @user = User.authenticate(params[:user][:email], params[:user][:password])
@@ -12,7 +11,7 @@ class SessionsController < ApplicationController
      if @user
       session[:user_id] = @user.id
       flash[:success] = "Login Successful!"
-      redirect_to root_path
+      redirect_to site_path
 
      else
       flash[:danger] = "Invalid Credentials"
@@ -21,7 +20,6 @@ class SessionsController < ApplicationController
 
   end
 
-  #delete the session (DELETE typically)
   def destroy
     session[:user_id] = nil
     flash[:info] = "User has logged out"
