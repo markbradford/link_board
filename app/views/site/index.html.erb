@@ -6,7 +6,8 @@
 <hr>
 <%= bootstrap_form_for :post do |f| %>
   <%= f.text_field :title, placeholder: "Title"%>
-  <%= f.text_area :text, placeholder: "Enter your post"%>
+  <%= f.text_field :link, placeholder: "Enter a valid URL"%>
+  <%= f.text_field :user_id, placeholder: "***FIX THIS!***"%>
   <%= f.submit "Submit Post", class: "btn btn-success" %>
 <% end %>
 </div>
